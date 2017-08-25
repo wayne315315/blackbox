@@ -5,7 +5,15 @@ Human Resource Dataset : https://www.kaggle.com/ludobenistant/hr-analytics
 # Declaration
 These scripts are partially modified from https://github.com/tensorflow/cleverhans
 
-# How to initate a black box attack 
+# Requirement
+- Python 3+
+- Tensorflow r1.2+
+- Keras 2.0+
+- git
+- numpy, h5py
+
+
+# How to initiate a black box attack 
 Step 1 : Open your terminal and type the following command to download the source code to your current directory:<br/>
 ```
 git clone https://github.com/wayne315315/blackbox.git

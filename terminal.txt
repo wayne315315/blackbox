@@ -1,0 +1,217 @@
+$ python3 hr_blackbox_attack.py
+Using TensorFlow backend.
+Import time : 3.661841630935669 seconds
+Data shape :  (14999, 19)
+X_SCHEME :  ['satisfaction_level', 'last_evaluation', 'number_project', 'average_montly_hours', 'time_spend_company', 'Work_accident', 'promotion_last_5years', 'salary', 'IT', 'RandD', 'accounting', 'hr', 'management', 'marketing', 'product_mng', 'sales', 'support', 'technical']
+Y_SCHEME :  ['left']
+X_TRAIN :  (12000, 18)
+Y_TRAIN :  (12000, 1)
+X_TEST :  (2999, 18)
+Y_TEST :  (2999, 1)
+Data reading time : 0.0716102123260498 seconds
+2017-08-25 15:47:19.228158: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-08-25 15:47:19.228477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 0 with properties: 
+name: GeForce 940MX
+major: 5 minor: 0 memoryClockRate (GHz) 1.189
+pciBusID 0000:02:00.0
+Total memory: 1.96GiB
+Free memory: 1.77GiB
+2017-08-25 15:47:19.228488: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 
+2017-08-25 15:47:19.228492: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y 
+2017-08-25 15:47:19.228514: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce 940MX, pci bus id: 0000:02:00.0)
+Oracle Construction and Compilation time : 0.03361225128173828 seconds
+Oracle Training time : 281.5642673969269 seconds
+Saved oracle configuration to disk
+Saved oracle weights to disk
+Oracle saving time : 0.015489339828491211 seconds
+Accuracy of the oracle on the train set : 0.971416666667
+Substitute Construction time : 0.010640382766723633 seconds
+Sample Generation time : 0.01179051399230957 seconds
+[ 237.]
+====================== Cycle 0 started. ======================
+Batch size : 1000
+loss : 0.0900049
+******** Epoch 1000 took 2 seconds. ********
+loss : 0.0380194
+******** Epoch 2000 took 2 seconds. ********
+loss : 0.0229896
+******** Epoch 3000 took 2 seconds. ********
+loss : 0.0147279
+******** Epoch 4000 took 2 seconds. ********
+loss : 0.00569411
+******** Epoch 5000 took 2 seconds. ********
+loss : 0.279426
+******** Epoch 6000 took 2 seconds. ********
+loss : 0.00174495
+******** Epoch 7000 took 2 seconds. ********
+loss : 0.000949065
+******** Epoch 8000 took 2 seconds. ********
+loss : 0.000833836
+******** Epoch 9000 took 2 seconds. ********
+loss : 0.000582958
+******** Epoch 10000 took 2 seconds. ********
+##### Cycle 0 : 12 seconds for sample generation. #####
+1000/1000 [==============================] - 0s
+# Real loss : 0.483018
+====================== Cycle 0 took 41 seconds. ======================
+====================== Cycle 1 started. ======================
+Batch size : 2000
+loss : 0.3493
+******** Epoch 1000 took 6 seconds. ********
+loss : 0.00190127
+******** Epoch 2000 took 6 seconds. ********
+loss : 0.0147914
+******** Epoch 3000 took 5 seconds. ********
+loss : 0.000621654
+******** Epoch 4000 took 5 seconds. ********
+loss : 0.00245458
+******** Epoch 5000 took 5 seconds. ********
+loss : 0.00103817
+******** Epoch 6000 took 5 seconds. ********
+loss : 0.00063016
+******** Epoch 7000 took 5 seconds. ********
+loss : 0.0141646
+******** Epoch 8000 took 5 seconds. ********
+loss : 0.0106191
+******** Epoch 9000 took 6 seconds. ********
+loss : 5.08952e-05
+******** Epoch 10000 took 5 seconds. ********
+##### Cycle 1 : 69 seconds for sample generation. #####
+2000/2000 [==============================] - 0s
+# Real loss : 0.516599
+====================== Cycle 1 took 129 seconds. ======================
+====================== Cycle 2 started. ======================
+Batch size : 4000
+loss : 0.00376377
+******** Epoch 1000 took 12 seconds. ********
+loss : 0.00580564
+******** Epoch 2000 took 12 seconds. ********
+loss : 0.00483081
+******** Epoch 3000 took 11 seconds. ********
+loss : 0.0154415
+******** Epoch 4000 took 11 seconds. ********
+loss : 0.0827117
+******** Epoch 5000 took 11 seconds. ********
+loss : 0.00381363
+******** Epoch 6000 took 12 seconds. ********
+loss : 0.003654
+******** Epoch 7000 took 11 seconds. ********
+loss : 0.0112377
+******** Epoch 8000 took 11 seconds. ********
+loss : 0.0450172
+******** Epoch 9000 took 11 seconds. ********
+loss : 0.00813179
+******** Epoch 10000 took 11 seconds. ********
+##### Cycle 2 : 315 seconds for sample generation. #####
+4000/4000 [==============================] - 0s
+# Real loss : 0.5944
+====================== Cycle 2 took 435 seconds. ======================
+====================== Cycle 3 started. ======================
+Batch size : 8000
+loss : 0.0096247
+******** Epoch 1000 took 24 seconds. ********
+loss : 0.0063051
+******** Epoch 2000 took 23 seconds. ********
+loss : 0.00404331
+******** Epoch 3000 took 24 seconds. ********
+loss : 0.00889885
+******** Epoch 4000 took 23 seconds. ********
+loss : 0.00347439
+******** Epoch 5000 took 23 seconds. ********
+loss : 0.00103301
+******** Epoch 6000 took 24 seconds. ********
+loss : 0.00412237
+******** Epoch 7000 took 24 seconds. ********
+loss : 0.0135727
+******** Epoch 8000 took 24 seconds. ********
+loss : 0.00111957
+******** Epoch 9000 took 23 seconds. ********
+loss : 0.00395625
+******** Epoch 10000 took 24 seconds. ********
+##### Cycle 3 : 1337 seconds for sample generation. #####
+8000/8000 [==============================] - 0s
+# Real loss : 0.535642
+====================== Cycle 3 took 1577 seconds. ======================
+====================== Cycle 4 started. ======================
+Batch size : 16000
+loss : 0.00939056
+******** Epoch 1000 took 49 seconds. ********
+loss : 0.0208568
+******** Epoch 2000 took 49 seconds. ********
+loss : 0.00315596
+******** Epoch 3000 took 49 seconds. ********
+loss : 0.00493795
+******** Epoch 4000 took 49 seconds. ********
+loss : 0.00389844
+******** Epoch 5000 took 49 seconds. ********
+loss : 0.0236707
+******** Epoch 6000 took 49 seconds. ********
+loss : 0.0027851
+******** Epoch 7000 took 49 seconds. ********
+loss : 0.00589722
+******** Epoch 8000 took 49 seconds. ********
+loss : 0.00796935
+******** Epoch 9000 took 49 seconds. ********
+loss : 0.00218618
+******** Epoch 10000 took 49 seconds. ********
+# Real loss : 0.284838
+====================== Cycle 4 took 499 seconds. ======================
+====================== Substitute Training time : 2683.8844606876373 seconds ======================
+Saved substitute configuration to disk
+Saved substitute weights to disk
+Substitute saving time : 0.3724544048309326 seconds
+Output of the oracle on the test set : [0 0 0 ..., 0 0 0]
+Accuracy of the oracle on the test set : 0.962987662554
+Accuracy of the substitute on the prediction of oracle output : 0.976166666667
+Accuracy of the substitute on the prediction of real output : 0.955916666667
+Fast Gradient Sign Method based on L1 norm
+Adversarial samples generation took  787.8381974697113 seconds
+Output of the oracle on the adversarial samples : [0 0 0 ..., 0 0 0]
+Accuracy of the oracle on the adversarial samples : 0.771923974658 
+
+Output of the oracle on the random augmented samples : [0 0 0 ..., 0 0 0]
+Accuracy of the oracle on the random augmented samples : 0.938646215405 
+
+Total execution time : 3758.217716217041 seconds
+
+
+
+##################################################################################################################################
+
+
+$ python3 hr_adv_only.py
+Using TensorFlow backend.
+Import time : 3.4361929893493652 seconds
+2017-08-25 17:03:18.346660: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-08-25 17:03:18.347013: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 0 with properties: 
+name: GeForce 940MX
+major: 5 minor: 0 memoryClockRate (GHz) 1.189
+pciBusID 0000:02:00.0
+Total memory: 1.96GiB
+Free memory: 1.76GiB
+2017-08-25 17:03:18.347024: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 
+2017-08-25 17:03:18.347027: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y 
+2017-08-25 17:03:18.347051: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce 940MX, pci bus id: 0000:02:00.0)
+Data shape :  (14999, 19)
+X_SCHEME :  ['satisfaction_level', 'last_evaluation', 'number_project', 'average_montly_hours', 'time_spend_company', 'Work_accident', 'promotion_last_5years', 'salary', 'IT', 'RandD', 'accounting', 'hr', 'management', 'marketing', 'product_mng', 'sales', 'support', 'technical']
+Y_SCHEME :  ['left']
+X_TRAIN :  (12000, 18)
+Y_TRAIN :  (12000, 1)
+X_TEST :  (2999, 18)
+Y_TEST :  (2999, 1)
+Data reading time : 0.07443523406982422 seconds
+Loading the oracle and the substitute
+Output of the oracle on the test set : [0 0 1 ..., 0 0 1]
+Accuracy of the oracle on the test set : 0.965655218406 
+
+Accuracy of the substitute on the prediction of oracle output : 0.97825
+Accuracy of the substitute on the prediction of real output : 0.956166666667
+Fast Gradient Sign Method based on L1 norm
+Adversarial samples generation took  101.05110311508179 seconds
+Output of the oracle on the adversarial samples : [0 0 0 ..., 0 0 0]
+Accuracy of the oracle on the adversarial samples : 0.766255418473 
+
+Output of the oracle on the random augmented samples : [0 0 1 ..., 0 0 1]
+Accuracy of the oracle on the random augmented samples : 0.944314771591 
+
+Total execution time : 104.96818256378174 seconds

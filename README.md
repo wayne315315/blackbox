@@ -44,13 +44,13 @@ for predicting the employment's resignment. </p>
 <p>All the architecture and the training data are all invisible to the hacker. 
 The only information hackers can get is the data output from the oracle which were fed by the hackers. </p>
 <p>In this scenario, hackers can perform a black box attack by constructing a selected model with totally different architecture
-and initialization, which is latter training with the sample set constructed by Jacobian-based augmentation. <br/>
-The reason of this step is to simulate the decision boundary of the oracle by training with the data point 
+and initialization, called the substitue model, which is latter training with the sample set constructed by Jacobian-based augmentation. <br/>
+The reason of this step is to simulate the decision boundary of the oracle by training with the data points 
 which contributed great variation on the output. </p>
 <p>After the substitute model is well-trained, the next step is to generate the adversarial samples via 
 Fast gradient sign method (FGSM).
 Here we adopt its general form Fast gradient method (FGM) on L1-norm for better performance. </br>
-The key to this method is to adding the tiny pertubation along the largest gradients of the cost function.
+The key to this method is to adding the tiny pertubation on x along the largest gradients of the cost function.
 Eventually, the model would assign the wrong label due to the increased cost for assigning the original label.</p>
 <p>We also apply a random perturbation of the same L1-norm to the test set as a controlled group.<br/>
 Comparing these two kinds of pertubation, you will find that the oracle is pretty robust to the random perturbation,
@@ -60,17 +60,17 @@ blind spots of the oracle are diffusely distributed but rare.</p>
 <p>Note that in this implementation, we only apply the perturbation on the first five features 
 because they are the only five continuous variables in the data set.</p>
 
-<p>For more details, please look up the reference on the abstract.</br>
-Blackbox attack on MNIST : https://github.com/tensorflow/cleverhans</p>
+<p>For more details, please look up the reference at the abstract.</br>
+The original implementation of black box attack on MNIST : https://github.com/tensorflow/cleverhans</p>
 
 # Current setting 
 Oracle : 3-layer fully connected neural network (relu - sigmoid - sigmoid) </br>
 Substitute : 2-layer fully connected neural network (sigmoid - linear) </br>
 Training set size : 12000 </br>
 Test set size : 2999 </br>
-Cycles for Jacobian_based augmentation (cycles) : 5 </br>
-Parameter lambda for Jacobian_based augmentation (lmbda) : 0.1 </br>
-Substitute learning rate (learning_rate) : 0.0005 </br>
+Cycles for Jacobian-based augmentation (cycles) : 5 </br>
+Parameter lambda for Jacobian-based augmentation (lmbda) : 0.1 </br>
+Substitute learning rate (learning_rate) : 0.005 </br>
 Batch size in substitute learning (batch_size) : 128 </br>
 Substitute training epochs during each cycle (epochs) : 10000 </br>
 Perturbation in L1-norm during FGM (epsilon) : 0.5 </br>
